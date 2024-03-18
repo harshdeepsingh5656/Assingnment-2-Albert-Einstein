@@ -1,0 +1,139 @@
+html {
+    font-size: 16px; 
+}
+
+body {
+    font: 1rem Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background: linear-gradient(to left, orange, white);
+    padding: 10px;
+    margin: 10px;
+}
+
+h1, h2 {
+    color: blue;
+   
+}
+
+footer p {
+    font-size: 0.8em;
+    color: gray;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+}
+
+ul, a{
+    color: blue;
+    font-size: large;
+    font-weight: bold;
+}
+
+aside {
+    padding: 20px;
+    margin: 10px;
+    background: url('../images/image5.jpg');  
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+/*
+img.mainimg {
+    shape-outside: circle();
+    float: left;
+    margin-right: 10px;
+}
+*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(50% at center);
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+}
+
+
+@media (min-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    aside {
+        flex: 1;
+    }
+
+    main {
+        flex: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    aside {
+        background: url('../images/image1.jpg');
+    }
+
+  
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    aside {
+        background: url('../images/image2.jpg');
+    }
+
+   
+}
